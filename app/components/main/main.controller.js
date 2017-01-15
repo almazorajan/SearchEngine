@@ -14,18 +14,7 @@
         vm.keyword = "";
         vm.siteResults = [];
         vm.search = search;
-        vm.tabs = [
-            {
-                name: "Google",
-                function: "searchGoogle",
-                isActive: true
-            },
-            {
-                name: "Bing",
-                function: "searchBing",
-                isActive: false
-            }
-        ];
+        vm.tabs = MainFactory.getTabs();
         vm.activeTab = vm.tabs[0];
         vm.toggleTab = toggleTab;
 

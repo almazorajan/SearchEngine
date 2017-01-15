@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     angular
@@ -9,11 +9,27 @@
 
     function MainFactory($http, $interpolate) {
         const factory = {
+            getTabs: getTabs,
             searchGoogle: searchGoogle,
             searchBing: searchBing
         };
 
         return factory;
+
+        function getTabs() {
+            return [
+                {
+                    name: "Google",
+                    function: "searchGoogle",
+                    isActive: true
+                },
+                {
+                    name: "Bing",
+                    function: "searchBing",
+                    isActive: false
+                }
+            ];
+        }
 
         function searchGoogle(keyword) {
             return $http.get($interpolate("/search/google/{{keyword}}")({ keyword: keyword }));

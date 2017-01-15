@@ -12,3 +12,10 @@ function SiteResult(_title, _link, _summary) {
 SiteResult.prototype.isComplete = function() {
     return this.title && this.link && this.summary;
 }
+
+SiteResult.prototype.fixLink = function() {
+    
+    if(this.link.indexOf("http") <= -1) {
+        this.link = `http://${this.link}`;
+    }
+}

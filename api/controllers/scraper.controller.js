@@ -25,7 +25,10 @@ router.get("/google/:keyword", (req, res) => {
                     container.find("div > div > cite").text(),
                     container.find("div > span").text());
                 
-                if(siteResult.isComplete()) output.push(siteResult);
+                if(siteResult.isComplete()) {
+                    siteResult.fixLink();
+                    output.push(siteResult);
+                }
 
                 counter++;
             }
@@ -54,8 +57,11 @@ router.get("/bing/:keyword", (req, res) => {
                     container.find("h2").text(),
                     container.find("div > div > cite").text(),
                     container.find("div > p").text());
-                
-                if(siteResult.isComplete()) output.push(siteResult);
+
+                if(siteResult.isComplete()) {
+                    siteResult.fixLink();
+                    output.push(siteResult);
+                }
 
                 counter++;
             }

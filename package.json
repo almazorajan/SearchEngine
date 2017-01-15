@@ -11,6 +11,7 @@
     "sample",
     "project"
   ],
+  "engine": "node 6.9.1",
   "author": "jan",
   "license": "ISC",
   "dependencies": {

@@ -1,7 +1,6 @@
 "use strict";
 
 const express = require("express");
-const fs = require("fs");
 const SiteResult = require("../helpers/site-result.js");
 const Result = require("../helpers/result.js");
 const scraper = require("../helpers/scraper.js");

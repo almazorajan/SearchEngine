@@ -27,5 +27,13 @@
     "gulp-minify": "0.0.14",
     "gulp-open": "^2.0.0",
     "run-sequence": "^1.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almazorajan/SearchEngine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/almazorajan/SearchEngine/issues"
+  },
+  "homepage": "https://github.com/almazorajan/SearchEngine#readme"
 }

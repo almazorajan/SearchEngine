@@ -28,7 +28,8 @@ gulp.task("minify", function () {
 });
 
 gulp.task("open", function(){
-    gulp.src("/")
+   return gulp
+        .src("/")
         .pipe(open({uri: "http://localhost:8080/" }));
 });
 

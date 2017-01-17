@@ -17,7 +17,7 @@ gulp.task("concat", function () {
     return gulp
         .src("app/**/**.js")
         .pipe(concat("app.js"), { newLine: ";" })
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest("dist"));
 });
 
 gulp.task("minify", function () {

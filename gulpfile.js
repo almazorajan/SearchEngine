@@ -1,6 +1,5 @@
 "use strict";
 
-const os = require("os");
 const gulp = require("gulp");
 const clean = require("gulp-clean");
 const concat = require("gulp-concat");
@@ -10,27 +9,27 @@ const runSequence = require("run-sequence");
 
 gulp.task("clean", function () {
     return gulp
-        .src('dist', { read: false })
+        .src("dist", { read: false })
         .pipe(clean());
 });
 
-gulp.task('concat', function () {
+gulp.task("concat", function () {
     return gulp
         .src("app/**/**.js")
-        .pipe(concat('app.js'), { newLine: ';' })
+        .pipe(concat("app.js"), { newLine: ";" })
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task("minify", function () {
     return gulp
-        .src('dist/app.js')
+        .src("dist/app.js")
         .pipe(minify())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest("dist"))
 });
 
-gulp.task('open', function(){
-    gulp.src('/')
-        .pipe(open({uri: 'http://localhost:8080/'}));
+gulp.task("open", function(){
+    gulp.src("/")
+        .pipe(open({uri: "http://localhost:8080/" }));
 });
 
 gulp.task("default", function() {

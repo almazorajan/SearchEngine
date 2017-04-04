@@ -1,6 +1,7 @@
 "use strict";
 
 const express = require("express");
+const process = require("process");
 const app = express();
 
 app.use(express.static(__dirname.replace(/\api/g, "")));
@@ -16,6 +17,6 @@ app.use(function(req, res, next) {
 // routes
 app.use("/search", require("./controllers/scraper.controller.js"));
 
-app.listen(8080, () => {
+app.listen(process.env.PORT ? process.env.PORT : 8080, () => {
     console.log("API running...");
 });
